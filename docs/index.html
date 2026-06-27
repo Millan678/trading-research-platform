@@ -4,196 +4,125 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Trading Research Platform</title>
-<link rel="stylesheet" href="css/style.css">
-<meta name="description" content="Research-only quantitative trading intelligence platform — 64 phases, 186 bridges, perpetual advisory mode">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔬</text></svg>">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<nav id="nav">
-  <div class="nav-brand">
-    <span class="nav-icon">🔬</span>
-    <span class="nav-title">TRP</span>
+<nav class="topbar">
+  <div class="logo">
+    <span class="logo-icon">🔬</span>
+    <span class="logo-text">TRP</span>
+    <span class="logo-sub">Trading Research Platform</span>
   </div>
   <div class="nav-links">
-    <a href="#" data-page="dashboard" class="active">Dashboard</a>
-    <a href="#" data-page="reports">Reports</a>
-    <a href="#" data-page="research">Research</a>
-    <a href="#" data-page="architecture">Architecture</a>
-    <a href="#" data-page="safety">Safety</a>
+    <button class="nav-link active" data-tab="dashboard" onclick="switchTab('dashboard')">📊 Dashboard</button>
+    <button class="nav-link" data-tab="reports" onclick="switchTab('reports')">📑 Reports</button>
+    <button class="nav-link" data-tab="research" onclick="switchTab('research')">🕷️ Research</button>
+    <button class="nav-link" data-tab="architecture" onclick="switchTab('architecture')">🏗️ Architecture</button>
+    <button class="nav-link" data-tab="safety" onclick="switchTab('safety')">🔒 Safety</button>
   </div>
-  <div class="nav-status">
-    <span class="badge badge-green">OPERATIONAL</span>
-    <span class="badge badge-amber">RESEARCH-ONLY</span>
+  <div class="api-status" id="api-status" title="Backend API status">
+    <span class="status-dot" id="api-dot"></span>
+    <span class="status-text" id="api-text">Checking...</span>
   </div>
 </nav>
 
-<main id="content">
+<main class="container">
   <!-- Dashboard Page -->
-  <section id="page-dashboard" class="page active">
-    <div class="hero">
-      <h1>Trading Research Platform</h1>
-      <p class="subtitle">Research-Only Quantitative Intelligence · 64 Phases · 186 Bridges · Perpetual Advisory Mode</p>
-    </div>
-    <div class="metrics-grid">
-      <div class="metric-card">
-        <div class="metric-value" id="metric-phases">64</div>
-        <div class="metric-label">Research Phases</div>
-        <div class="metric-bar"><div class="metric-fill" style="width:100%"></div></div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-value" id="metric-modules">102</div>
-        <div class="metric-label">Core Modules</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-value" id="metric-bridges">186</div>
-        <div class="metric-label">Read-Only Bridges</div>
-      </div>
-      <div class="metric-card">
-        <div class="metric-value" id="metric-loc">272K</div>
-        <div class="metric-label">Lines of Code</div>
-      </div>
-      <div class="metric-card accent-green">
-        <div class="metric-value">8/8</div>
-        <div class="metric-label">Safety Blocks Active</div>
-        <div class="metric-detail">All forbidden ops → RuntimeError</div>
-      </div>
-      <div class="metric-card accent-green">
-        <div class="metric-value">11/11</div>
-        <div class="metric-label">CLI Checks Passed</div>
-      </div>
-      <div class="metric-card accent-cyan">
-        <div class="metric-value">SHA-256</div>
-        <div class="metric-label">Deterministic Hash</div>
-        <div class="metric-detail">fd8767c9ea37f4c8</div>
-      </div>
-      <div class="metric-card accent-amber">
-        <div class="metric-value">ADVISORY</div>
-        <div class="metric-label">Mode — No Live Trading</div>
-        <div class="metric-detail">Structurally enforced</div>
-      </div>
-    </div>
-    <h2 class="section-title">Live Dashboard</h2>
-    <div id="dashboard-grid" class="dashboard-grid"></div>
-  </section>
+  <div class="page active" id="dashboard">
+    <h2>📊 System Dashboard</h2>
+    <p class="subtitle">Real-time status of all 10 subsystems — advisory-only, research mode</p>
+    <div class="grid" id="dashboard-grid"></div>
+  </div>
 
   <!-- Reports Page -->
-  <section id="page-reports" class="page">
-    <h1>Research Reports</h1>
-    <p class="subtitle">Generated reports — all advisory-only, no production impact</p>
-    <div id="reports-list" class="reports-list"></div>
-  </section>
+  <div class="page" id="reports">
+    <h2>📑 Research Reports</h2>
+    <p class="subtitle">Auto-generated advisory reports — all claims verified, replicated, and bias-checked</p>
+    <div class="grid" id="reports-list"></div>
+  </div>
 
-  <!-- Research Page (Scraping) -->
-  <section id="page-research" class="page">
-    <h1>Live Research</h1>
-    <p class="subtitle">Scrape financial research, papers, and market intelligence</p>
-    <div class="research-panel">
-      <div class="research-input">
-        <input type="text" id="scrape-url" placeholder="Enter URL to scrape (e.g. https://arxiv.org/list/q-fin/recent)">
-        <button id="btn-scrape" class="btn btn-primary">🔍 Scrape</button>
-        <button id="btn-scrape-all" class="btn btn-secondary">📚 Batch Scrape Predefined</button>
+  <!-- Research Page (Live Scraping) -->
+  <div class="page" id="research">
+    <h2>🕷️ Live Research</h2>
+    <p class="subtitle">Scrape research sources in real-time — powered by Scrapling with TLS fingerprinting</p>
+    
+    <div class="research-layout">
+      <div class="research-sidebar">
+        <h3>Source Presets</h3>
+        <div id="research-presets" class="preset-grid"></div>
+        
+        <div class="custom-url-section">
+          <h3>Custom URL</h3>
+          <div class="url-input-group">
+            <input type="url" id="custom-url" placeholder="https://example.com/research" class="url-input">
+            <button class="btn btn-primary" onclick="scrapeCustom()">Scrape</button>
+          </div>
+        </div>
+        
+        <button class="btn btn-outline" onclick="showHistory()">📋 History (<span id="history-count">0</span>)</button>
       </div>
-      <div class="research-presets">
-        <h3>Predefined Research Sources</h3>
-        <div class="preset-chips" id="preset-chips"></div>
-      </div>
-      <div class="research-results" id="research-results">
-        <div class="empty-state">Enter a URL or click a preset source above to begin research</div>
+      
+      <div class="research-main">
+        <div id="research-results" class="results-panel">
+          <div class="card placeholder-card">
+            <h3>Select a source or enter a URL</h3>
+            <p>Click any preset source on the left, or enter a custom URL to begin scraping.</p>
+            <p class="muted">The backend API (port 8000) enables live scraping. Without it, CORS proxies are used as fallback.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
 
   <!-- Architecture Page -->
-  <section id="page-architecture" class="page">
-    <h1>Platform Architecture</h1>
-    <p class="subtitle">64 phases, 3 unification layers, 186 read-only bridges</p>
-    <div class="arch-container">
-      <div class="arch-layer">
-        <h3>Phase 62 — Research Core</h3>
-        <p>Unification of Phases 1–61. Global context, memory, capabilities, planning, synchronization, subsystem health, recommendations, knowledge state, system health.</p>
-        <div class="arch-stats">95 modules · 10 dashboard pages · 8 reports</div>
-      </div>
-      <div class="arch-connector">↓ 186 Read-Only Bridges ↓</div>
-      <div class="arch-layer">
-        <h3>Phase 63 — Platform Finalization</h3>
-        <p>Final consolidation. Acceptance engine, certification engine, platform auditor. Bridges P1–P62.</p>
-        <div class="arch-stats">95 modules · Certification verified</div>
-      </div>
-      <div class="arch-connector">↓ SHA-256 Deterministic ↓</div>
-      <div class="arch-layer">
-        <h3>Phase 64 — Platform Verification</h3>
-        <p>Full verification suite: safety (8/8 blocked), integrity, determinism, scalability, fault injection, recovery, security, compliance, certification.</p>
-        <div class="arch-stats">98 modules · 11/11 checks passed · Hash fd8767c9ea37f4c8</div>
-      </div>
-    </div>
-    <div class="bridge-map">
-      <h3>Read-Only Bridge Map</h3>
-      <p>Every bridge enforces structural read-only access. Write operations raise RuntimeError at construction time, not runtime.</p>
-      <div class="bridge-grid" id="bridge-grid"></div>
-    </div>
-  </section>
+  <div class="page" id="architecture">
+    <h2>🏗️ System Architecture</h2>
+    <p class="subtitle">3-phase unification: P62 → P63 → P64 → 186 read-only bridges</p>
+    <div id="architecture-content"></div>
+  </div>
 
   <!-- Safety Page -->
-  <section id="page-safety" class="page">
-    <h1>Safety Architecture</h1>
-    <p class="subtitle">Structurally incapable of live trading, broker execution, or production modification</p>
-    <div class="safety-grid">
-      <div class="safety-card blocked">
-        <div class="safety-icon">🚫</div>
-        <h3>Live Trading</h3>
-        <p>RuntimeError at construction</p>
-      </div>
-      <div class="safety-card blocked">
-        <div class="safety-icon">🚫</div>
-        <h3>Broker Execution</h3>
-        <p>RuntimeError at construction</p>
-      </div>
-      <div class="safety-card blocked">
-        <div class="safety-icon">🚫</div>
-        <h3>Order Placement</h3>
-        <p>RuntimeError at construction</p>
-      </div>
-      <div class="safety-card blocked">
-        <div class="safety-icon">🚫</div>
-        <h3>Auto Deployment</h3>
-        <p>RuntimeError at construction</p>
-      </div>
-      <div class="safety-card blocked">
-        <div class="safety-icon">🚫</div>
-        <h3>Production Modify</h3>
-        <p>RuntimeError at construction</p>
-      </div>
-      <div class="safety-card blocked">
-        <div class="safety-icon">🚫</div>
-        <h3>Governance Bypass</h3>
-        <p>RuntimeError at construction</p>
-      </div>
-      <div class="safety-card blocked">
-        <div class="safety-icon">🚫</div>
-        <h3>Real Capital Risk</h3>
-        <p>RuntimeError at construction</p>
-      </div>
-      <div class="safety-card blocked">
-        <div class="safety-icon">🚫</div>
-        <h3>Market Manipulation</h3>
-        <p>RuntimeError at construction</p>
-      </div>
-    </div>
-    <div class="constitution">
-      <h3>Platform Constitution</h3>
-      <div id="constitution-articles" class="constitution-grid"></div>
-    </div>
-  </section>
+  <div class="page" id="safety">
+    <h2>🔒 Safety Enforcement</h2>
+    <p class="subtitle">Structurally prohibited operations — RuntimeError at construction time</p>
+    <div id="safety-content"></div>
+  </div>
 </main>
 
-<footer>
+<!-- Report Modal -->
+<div class="modal" id="report-modal" onclick="if(event.target===this)closeModal()"></div>
+
+<!-- Footer -->
+<footer class="footer">
   <div class="footer-content">
     <span>🔬 Trading Research Platform v1.0</span>
-    <span>Research-Only · Advisory Mode · No Live Trading</span>
-    <span><a href="https://github.com/Millan678/trading-research-platform">GitHub</a></span>
+    <span class="advisory-badge">Advisory Only — No Live Trading</span>
+    <a href="https://github.com/Millan678/trading-research-platform" target="_blank">GitHub</a>
   </div>
 </footer>
 
 <script src="js/app.js"></script>
+<script>
+  // Check API status on load
+  (async function checkAPI() {
+    const dot = document.getElementById('api-dot');
+    const text = document.getElementById('api-text');
+    try {
+      const r = await fetch('http://localhost:8000/health', { signal: AbortSignal.timeout(3000) });
+      const d = await r.json();
+      dot.classList.add('online');
+      text.textContent = 'API Online';
+      dot.title = `Backend: ${d.mode}`;
+    } catch(e) {
+      dot.classList.add('offline');
+      text.textContent = 'API Offline';
+    }
+    // Update history count
+    const hist = JSON.parse(localStorage.getItem('trp_scrape_history') || '[]');
+    const hc = document.getElementById('history-count');
+    if (hc) hc.textContent = hist.length;
+  })();
+</script>
 </body>
 </html>

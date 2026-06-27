@@ -1,0 +1,11 @@
+{
+  "page_id": 7,
+  "title": "Recommendations",
+  "slug": "recommendations",
+  "data": {
+    "advisory_only": true,
+    "status": "advisory",
+    "note": "All recommendations are advisory-only. No live trading."
+  },
+  "advisory_only": true
+}

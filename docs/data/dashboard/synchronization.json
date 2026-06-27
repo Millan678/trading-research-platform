@@ -1,0 +1,15 @@
+{
+  "page_id": 5,
+  "title": "Synchronization",
+  "slug": "synchronization",
+  "data": {
+    "advisory_only": true,
+    "status": "synchronized",
+    "sync_protocols": [
+      "bridge_sync",
+      "evidence_sync",
+      "claim_sync"
+    ]
+  },
+  "advisory_only": true
+}

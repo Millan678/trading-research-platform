@@ -1,0 +1,17 @@
+{
+  "page_id": 2,
+  "title": "Memory",
+  "slug": "memory",
+  "data": {
+    "advisory_only": true,
+    "status": "active",
+    "memory_types": [
+      "episodic",
+      "semantic",
+      "procedural",
+      "working",
+      "long_term"
+    ]
+  },
+  "advisory_only": true
+}

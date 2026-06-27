@@ -104,6 +104,7 @@ backups/
 
 # ── Temporary datasets ──────────────────────────────────
 data/
+!docs/data/
 datasets/
 *.csv.gz
 *.parquet

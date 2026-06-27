@@ -1,0 +1,5 @@
+# PLATFORM_FOUNDATION_REPORT
+
+Generated: 2026-06-27T07:15:04.466722
+
+Status: advisory_only

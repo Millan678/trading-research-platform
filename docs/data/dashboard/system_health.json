@@ -1,0 +1,14 @@
+{
+  "page_id": 9,
+  "title": "System Health",
+  "slug": "system_health",
+  "data": {
+    "advisory_only": true,
+    "status": "healthy",
+    "safety_verification": "8/8 BLOCKED",
+    "cli_verification": "11/11 PASSED",
+    "certification_hash": "fd8767c9ea37f4c8",
+    "deterministic": true
+  },
+  "advisory_only": true
+}

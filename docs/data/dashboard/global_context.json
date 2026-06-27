@@ -1,0 +1,28 @@
+{
+  "page_id": 1,
+  "title": "Global Context",
+  "slug": "global_context",
+  "data": {
+    "advisory_only": true,
+    "status": "active",
+    "categories": [
+      "research",
+      "reasoning",
+      "evidence",
+      "knowledge",
+      "discovery",
+      "governance",
+      "evaluation",
+      "benchmarking",
+      "calibration",
+      "consensus",
+      "institution",
+      "observatory",
+      "digital_twin",
+      "scientific_impact",
+      "constitution",
+      "platform_intelligence"
+    ]
+  },
+  "advisory_only": true
+}

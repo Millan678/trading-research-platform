@@ -1,0 +1,15 @@
+{
+  "page_id": 0,
+  "title": "Research Core",
+  "slug": "research_core",
+  "data": {
+    "advisory_only": true,
+    "status": "operational",
+    "total_phases": 64,
+    "core_modules": 102,
+    "bridges": 186,
+    "safety_blocked": 8,
+    "total_loc": 272429
+  },
+  "advisory_only": true
+}

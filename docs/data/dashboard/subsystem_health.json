@@ -1,0 +1,18 @@
+{
+  "page_id": 6,
+  "title": "Subsystem Health",
+  "slug": "subsystem_health",
+  "data": {
+    "advisory_only": true,
+    "status": "healthy",
+    "subsystems": [
+      "storage_sqlite",
+      "storage_json",
+      "backup_sha256",
+      "evidence_graph",
+      "replication_engine",
+      "bias_detector"
+    ]
+  },
+  "advisory_only": true
+}

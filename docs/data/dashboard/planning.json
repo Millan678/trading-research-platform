@@ -1,0 +1,16 @@
+{
+  "page_id": 4,
+  "title": "Planning",
+  "slug": "planning",
+  "data": {
+    "advisory_only": true,
+    "status": "operational",
+    "goal_statuses": [
+      "pending",
+      "in_progress",
+      "completed",
+      "cancelled"
+    ]
+  },
+  "advisory_only": true
+}

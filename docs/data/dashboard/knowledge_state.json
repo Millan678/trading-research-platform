@@ -1,0 +1,40 @@
+{
+  "page_id": 8,
+  "title": "Knowledge State",
+  "slug": "knowledge_state",
+  "data": {
+    "advisory_only": true,
+    "status": "synchronized",
+    "constitution_articles": [
+      "research_integrity",
+      "scientific_method",
+      "peer_review",
+      "transparency",
+      "reproducibility",
+      "ethical_compliance",
+      "advisory_only",
+      "no_live_trading",
+      "no_production_modification",
+      "immutable_history"
+    ],
+    "context_domains": [
+      "research",
+      "reasoning",
+      "evidence",
+      "knowledge",
+      "discovery",
+      "governance",
+      "evaluation",
+      "benchmarking",
+      "calibration",
+      "consensus",
+      "institution",
+      "observatory",
+      "digital_twin",
+      "scientific_impact",
+      "constitution",
+      "platform_intelligence"
+    ]
+  },
+  "advisory_only": true
+}

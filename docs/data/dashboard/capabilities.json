@@ -1,0 +1,20 @@
+{
+  "page_id": 3,
+  "title": "Capabilities",
+  "slug": "capabilities",
+  "data": {
+    "advisory_only": true,
+    "status": "available",
+    "features": [
+      "evidence_tracking",
+      "claim_management",
+      "replication_analysis",
+      "bias_detection",
+      "dashboard_generation",
+      "report_generation",
+      "backup_sha256",
+      "storage_sqlite_json_postgres"
+    ]
+  },
+  "advisory_only": true
+}

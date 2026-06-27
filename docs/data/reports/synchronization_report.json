@@ -1,0 +1,141 @@
+{
+  "report_id": "SYNCHRONIZATION_REPORT",
+  "generated_at": "2026-06-27T07:15:04.461544",
+  "data": {
+    "research_core": {
+      "advisory_only": true,
+      "status": "operational",
+      "total_phases": 64,
+      "core_modules": 102,
+      "bridges": 186,
+      "safety_blocked": 8,
+      "total_loc": 272429
+    },
+    "global_context": {
+      "advisory_only": true,
+      "status": "active",
+      "categories": [
+        "research",
+        "reasoning",
+        "evidence",
+        "knowledge",
+        "discovery",
+        "governance",
+        "evaluation",
+        "benchmarking",
+        "calibration",
+        "consensus",
+        "institution",
+        "observatory",
+        "digital_twin",
+        "scientific_impact",
+        "constitution",
+        "platform_intelligence"
+      ]
+    },
+    "memory": {
+      "advisory_only": true,
+      "status": "active",
+      "memory_types": [
+        "episodic",
+        "semantic",
+        "procedural",
+        "working",
+        "long_term"
+      ]
+    },
+    "capabilities": {
+      "advisory_only": true,
+      "status": "available",
+      "features": [
+        "evidence_tracking",
+        "claim_management",
+        "replication_analysis",
+        "bias_detection",
+        "dashboard_generation",
+        "report_generation",
+        "backup_sha256",
+        "storage_sqlite_json_postgres"
+      ]
+    },
+    "planning": {
+      "advisory_only": true,
+      "status": "operational",
+      "goal_statuses": [
+        "pending",
+        "in_progress",
+        "completed",
+        "cancelled"
+      ]
+    },
+    "synchronization": {
+      "advisory_only": true,
+      "status": "synchronized",
+      "sync_protocols": [
+        "bridge_sync",
+        "evidence_sync",
+        "claim_sync"
+      ]
+    },
+    "subsystem_health": {
+      "advisory_only": true,
+      "status": "healthy",
+      "subsystems": [
+        "storage_sqlite",
+        "storage_json",
+        "backup_sha256",
+        "evidence_graph",
+        "replication_engine",
+        "bias_detector"
+      ]
+    },
+    "recommendations": {
+      "advisory_only": true,
+      "status": "advisory",
+      "note": "All recommendations are advisory-only. No live trading."
+    },
+    "knowledge_state": {
+      "advisory_only": true,
+      "status": "synchronized",
+      "constitution_articles": [
+        "research_integrity",
+        "scientific_method",
+        "peer_review",
+        "transparency",
+        "reproducibility",
+        "ethical_compliance",
+        "advisory_only",
+        "no_live_trading",
+        "no_production_modification",
+        "immutable_history"
+      ],
+      "context_domains": [
+        "research",
+        "reasoning",
+        "evidence",
+        "knowledge",
+        "discovery",
+        "governance",
+        "evaluation",
+        "benchmarking",
+        "calibration",
+        "consensus",
+        "institution",
+        "observatory",
+        "digital_twin",
+        "scientific_impact",
+        "constitution",
+        "platform_intelligence"
+      ]
+    },
+    "system_health": {
+      "advisory_only": true,
+      "status": "healthy",
+      "safety_verification": "8/8 BLOCKED",
+      "cli_verification": "11/11 PASSED",
+      "certification_hash": "fd8767c9ea37f4c8",
+      "deterministic": true
+    }
+  },
+  "advisory_only": true
+}

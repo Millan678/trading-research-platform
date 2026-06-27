@@ -1,0 +1,62 @@
+{
+  "reports": [
+    {
+      "id": "CAPABILITY_REPORT",
+      "title": "",
+      "category": "",
+      "generated_at": "2026-06-27T07:15:04.459780",
+      "summary": ""
+    },
+    {
+      "id": "CORE_HEALTH_REPORT",
+      "title": "",
+      "category": "",
+      "generated_at": "2026-06-27T07:15:04.463288",
+      "summary": ""
+    },
+    {
+      "id": "GLOBAL_CONTEXT_REPORT",
+      "title": "",
+      "category": "",
+      "generated_at": "2026-06-27T07:15:04.456333",
+      "summary": ""
+    },
+    {
+      "id": "MEMORY_REPORT",
+      "title": "",
+      "category": "",
+      "generated_at": "2026-06-27T07:15:04.458074",
+      "summary": ""
+    },
+    {
+      "id": "PHASE62_RESEARCH_CORE_READINESS_REPORT",
+      "title": "",
+      "category": "",
+      "generated_at": "2026-06-27T07:15:04.454515",
+      "summary": ""
+    },
+    {
+      "id": "PLATFORM_FOUNDATION_REPORT",
+      "title": "",
+      "category": "",
+      "generated_at": "2026-06-27T07:15:04.466722",
+      "summary": ""
+    },
+    {
+      "id": "RESEARCH_STATE_REPORT",
+      "title": "",
+      "category": "",
+      "generated_at": "2026-06-27T07:15:04.464940",
+      "summary": ""
+    },
+    {
+      "id": "SYNCHRONIZATION_REPORT",
+      "title": "",
+      "category": "",
+      "generated_at": "2026-06-27T07:15:04.461544",
+      "summary": ""
+    }
+  ],
+  "total": 8,
+  "advisory_only": true
+}

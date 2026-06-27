@@ -1,0 +1,47 @@
+name: Lint
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install linters
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff black isort
+
+      - name: Ruff check
+        run: |
+          ruff check trading-research-core/ trading-platform-finalization/ trading-platform-verification/ scripts/
+        continue-on-error: true
+
+      - name: Black check (check only — no auto-format)
+        run: |
+          black --check trading-research-core/ trading-platform-finalization/ trading-platform-verification/ scripts/
+        continue-on-error: true
+
+      - name: isort check (check only — no auto-format)
+        run: |
+          isort --check-only trading-research-core/ trading-platform-finalization/ trading-platform-verification/ scripts/
+        continue-on-error: true
+
+      - name: Lint summary
+        if: always()
+        run: |
+          echo "Lint checks complete (advisory — non-blocking)"
+          echo "No automatic formatting applied"

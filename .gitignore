@@ -1,0 +1,137 @@
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Trading Research Platform — .gitignore
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# Research-only platform. No live trading, broker execution,
+# or production modification is supported or possible.
+
+# ── Python ──────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+*.eggs/
+dist/
+build/
+wheels/
+*.whl
+pip-wheel-metadata/
+.eggs/
+
+# ── Virtual environments ─────────────────────────────────
+venv/
+.env/
+.venv/
+env/
+.env.local
+.env.*.local
+
+# ── Python tooling ───────────────────────────────────────
+.mypy_cache/
+.pytest_cache/
+.hypothesis/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.ruff_cache/
+.pytype/
+
+# ── SQLite / databases ──────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+
+# ── Redis ───────────────────────────────────────────────
+dump.rdb
+appendonly.aof
+
+# ── PHP / Laravel ───────────────────────────────────────
+/vendor/
+/node_modules/
+/storage/
+bootstrap/cache/
+.phpunit.result.cache
+*.cache
+
+# ── Composer ────────────────────────────────────────────
+composer.phar
+composer.lock
+
+# ── Node.js ─────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+.yarn/
+.pnp.*
+package-lock.json
+
+# ── Logs ────────────────────────────────────────────────
+*.log
+logs/
+log/
+
+# ── Cache ───────────────────────────────────────────────
+.cache/
+*.cache
+tmp/
+temp/
+
+# ── IDE / Editor ────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+.project
+.classpath
+.settings/
+
+# ── Backup archives ─────────────────────────────────────
+backups/
+*.tar.gz
+*.zip
+*.bak
+*.archive
+
+# ── Temporary datasets ──────────────────────────────────
+data/
+datasets/
+*.csv.gz
+*.parquet
+*.h5
+*.hdf5
+
+# ── AI model caches ─────────────────────────────────────
+models/
+.model_cache/
+huggingface/
+*.gguf
+*.bin
+*.safetensors
+*.onnx
+
+# ── Output / generated ──────────────────────────────────
+output/
+results/
+artifacts/
+
+# ── OS ──────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# ── Git ─────────────────────────────────────────────────
+*.orig
+*.patch

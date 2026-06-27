@@ -1,0 +1,71 @@
+name: Verify
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff black isort
+          # Core platform is stdlib-only — no pip install needed
+
+      - name: Verify imports (Phase 62)
+        run: |
+          cd trading-research-core
+          python -c "from research_core import ResearchCorePlatform; print('P62 import OK')"
+
+      - name: Verify imports (Phase 63)
+        run: |
+          cd trading-platform-finalization
+          python -c "from platform_finalization import PlatformFinalizationPlatform; print('P63 import OK')"
+
+      - name: Verify imports (Phase 64)
+        run: |
+          cd trading-platform-verification
+          python -c "from platform_verification import PlatformVerificationPlatform; print('P64 import OK')"
+
+      - name: CLI smoke test (Phase 62)
+        run: |
+          cd trading-research-core
+          python -m research_core.cli status
+
+      - name: CLI smoke test (Phase 63)
+        run: |
+          cd trading-platform-finalization
+          python -m platform_finalization.cli status
+
+      - name: CLI smoke test (Phase 64)
+        run: |
+          cd trading-platform-verification
+          python -m platform_verification.cli status
+
+      - name: Verification suite (Phase 64)
+        run: |
+          cd trading-platform-verification
+          python verify.py
+
+      - name: Report success
+        if: success()
+        run: |
+          echo "✅ All verification checks passed"
+          echo "Platform: Trading Research Platform v1.0"
+          echo "Phases: 1-64"
+          echo "Safety: RESEARCH-ONLY"

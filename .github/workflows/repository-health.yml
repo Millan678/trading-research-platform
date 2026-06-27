@@ -1,0 +1,59 @@
+name: Repository Health
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    - cron: '0 6 * * 1'  # Every Monday 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check for broken imports
+        run: |
+          python scripts/stats.py --check-imports
+        continue-on-error: true
+
+      - name: Check for missing modules
+        run: |
+          python scripts/stats.py --check-modules
+        continue-on-error: true
+
+      - name: Check for empty directories
+        run: |
+          find . -type d -empty -not -path './.git/*' -not -path './venv/*' | head -20
+        continue-on-error: true
+
+      - name: Check for duplicate filenames
+        run: |
+          python scripts/stats.py --check-duplicates
+        continue-on-error: true
+
+      - name: Documentation coverage
+        run: |
+          python scripts/stats.py --doc-coverage
+        continue-on-error: true
+
+      - name: Repository statistics
+        run: |
+          python scripts/stats.py --summary
+
+      - name: Health report
+        if: always()
+        run: |
+          echo "=== Repository Health Check Complete ==="
+          echo "All checks are advisory (non-blocking)"

@@ -1,8 +1,8 @@
 {
-  "last_updated": "2026-06-27T11:54:44.084996+00:00",
+  "last_updated": "2026-06-27T15:57:11.589104+00:00",
   "sources_scraped": 15,
   "successful": 13,
-  "total_content_length": 144520,
+  "total_content_length": 149346,
   "total_links": 401,
   "items": [
     {
@@ -13,7 +13,7 @@
       "content_length": 19039,
       "title": "Quantitative Finance",
       "links_count": 30,
-      "scraped_at": "2026-06-27T11:53:18.114757+00:00"
+      "scraped_at": "2026-06-27T15:55:46.108842+00:00"
     },
     {
       "name": "SEC EDGAR Current Filings",
@@ -23,17 +23,17 @@
       "content_length": 9950,
       "title": "Latest EDGAR Filings",
       "links_count": 30,
-      "scraped_at": "2026-06-27T11:53:23.884148+00:00"
+      "scraped_at": "2026-06-27T15:55:51.708330+00:00"
     },
     {
       "name": "FRED Economic Data",
       "url": "https://fred.stlouisfed.org/",
       "category": "economic",
       "status": 200,
-      "content_length": 4140,
+      "content_length": 4082,
       "title": "Federal Reserve Economic Data | FRED | St. Louis Fed",
       "links_count": 30,
-      "scraped_at": "2026-06-27T11:53:29.415736+00:00"
+      "scraped_at": "2026-06-27T15:55:57.379981+00:00"
     },
     {
       "name": "NBER Working Papers",
@@ -43,7 +43,7 @@
       "content_length": 5446,
       "title": "Working Papers | NBER",
       "links_count": 30,
-      "scraped_at": "2026-06-27T11:53:34.968374+00:00"
+      "scraped_at": "2026-06-27T15:56:03.298373+00:00"
     },
     {
       "name": "World Bank Open Data",
@@ -53,7 +53,7 @@
       "content_length": 3667,
       "title": "World Bank Open Data | Data",
       "links_count": 30,
-      "scraped_at": "2026-06-27T11:53:40.377175+00:00"
+      "scraped_at": "2026-06-27T15:56:08.679792+00:00"
     },
     {
       "name": "FDIC Bank Failures",
@@ -63,47 +63,47 @@
       "content_length": 12125,
       "title": "Failed Bank List | FDIC.gov",
       "links_count": 30,
-      "scraped_at": "2026-06-27T11:53:48.259593+00:00"
+      "scraped_at": "2026-06-27T15:56:15.148705+00:00"
     },
     {
       "name": "Investopedia Markets",
       "url": "https://www.investopedia.com/markets",
       "category": "education",
       "status": 200,
-      "content_length": 7872,
+      "content_length": 7823,
       "title": "News",
       "links_count": 30,
-      "scraped_at": "2026-06-27T11:53:54.383189+00:00"
+      "scraped_at": "2026-06-27T15:56:21.351539+00:00"
     },
     {
       "name": "Yahoo Finance",
       "url": "https://finance.yahoo.com/",
       "category": "market_data",
       "status": 200,
-      "content_length": 8255,
+      "content_length": 8239,
       "title": "Yahoo Finance - Stock Market Live, Quotes, Business & Finance News",
       "links_count": 30,
-      "scraped_at": "2026-06-27T11:54:00.664928+00:00"
+      "scraped_at": "2026-06-27T15:56:27.576614+00:00"
     },
     {
       "name": "TradingView Ideas",
       "url": "https://www.tradingview.com/ideas/",
       "category": "analysis",
       "status": 200,
-      "content_length": 36158,
+      "content_length": 40856,
       "title": "Trading Ideas and Technical Analysis From Top Traders \u2014 TradingView",
       "links_count": 30,
-      "scraped_at": "2026-06-27T11:54:06.379304+00:00"
+      "scraped_at": "2026-06-27T15:56:33.204643+00:00"
     },
     {
       "name": "CoinDesk Crypto News",
       "url": "https://www.coindesk.com/",
       "category": "crypto",
       "status": 200,
-      "content_length": 10507,
+      "content_length": 10758,
       "title": "CoinDesk: Bitcoin, Ethereum, XRP, Crypto News and Price Data",
       "links_count": 30,
-      "scraped_at": "2026-06-27T11:54:12.848692+00:00"
+      "scraped_at": "2026-06-27T15:56:39.615186+00:00"
     },
     {
       "name": "SSRN New Papers",
@@ -113,7 +113,7 @@
       "content_length": 6900,
       "title": "SSRN Home Page",
       "links_count": 0,
-      "scraped_at": "2026-06-27T11:54:18.213883+00:00"
+      "scraped_at": "2026-06-27T15:56:45.003227+00:00"
     },
     {
       "name": "St. Louis Fed Research",
@@ -123,7 +123,7 @@
       "content_length": 5839,
       "title": "Economic Research | St. Louis Fed",
       "links_count": 30,
-      "scraped_at": "2026-06-27T11:54:25.904317+00:00"
+      "scraped_at": "2026-06-27T15:56:53.320111+00:00"
     },
     {
       "name": "BIS Publications",
@@ -133,7 +133,7 @@
       "content_length": 379,
       "title": "Page not found",
       "links_count": 11,
-      "scraped_at": "2026-06-27T11:54:31.829789+00:00"
+      "scraped_at": "2026-06-27T15:56:59.214797+00:00"
     },
     {
       "name": "CFTC Weekly Reports",
@@ -143,7 +143,7 @@
       "content_length": 2275,
       "title": "404 Page Not Found | CFTC",
       "links_count": 30,
-      "scraped_at": "2026-06-27T11:54:38.209134+00:00"
+      "scraped_at": "2026-06-27T15:57:05.867543+00:00"
     },
     {
       "name": "Federal Reserve Board",
@@ -153,7 +153,7 @@
       "content_length": 11968,
       "title": "Federal Reserve Board - News & Events",
       "links_count": 30,
-      "scraped_at": "2026-06-27T11:54:44.082965+00:00"
+      "scraped_at": "2026-06-27T15:57:11.586497+00:00"
     }
   ],
   "advisory_only": true
